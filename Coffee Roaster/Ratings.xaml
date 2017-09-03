@@ -1,0 +1,47 @@
+﻿<UserControl
+    x:Class="Coffee_Roaster.Ratings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Coffee_Roaster"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="150" Height="30"
+    PointerExited="UserControl_PointerExited">
+
+    <RelativePanel VerticalAlignment="Top">
+        <TextBlock x:Name="myTextBlock"></TextBlock>
+        <Image 
+            Name="img1"
+            Source="/Assets/goldstar.jpg"
+            PointerEntered="img_PointerEntered"
+            PointerPressed="img_PointerPressed"/>
+
+        <Image 
+            Name="img2" 
+            RelativePanel.RightOf="img1" 
+            Source="/Assets/goldstar.jpg"
+            PointerEntered="img_PointerEntered"
+            PointerPressed="img_PointerPressed"/>
+
+        <Image 
+            Name="img3" 
+            RelativePanel.RightOf="img2" 
+            Source="/Assets/goldstar.jpg"
+            PointerEntered="img_PointerEntered"
+            PointerPressed="img_PointerPressed"/>
+        <Image 
+            Name="img4" 
+            RelativePanel.RightOf="img3" 
+            Source="/Assets/goldstar.jpg"
+            PointerEntered="img_PointerEntered"
+            PointerPressed="img_PointerPressed"/>
+
+        <Image 
+            Name="img5" 
+            RelativePanel.RightOf="img4" 
+            Source="/Assets/greystar.gif"
+            PointerEntered="img_PointerEntered"
+            PointerPressed="img_PointerPressed"/>
+    </RelativePanel>
+</UserControl>

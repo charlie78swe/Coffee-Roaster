@@ -1,0 +1,22 @@
+﻿<Application
+    x:Class="Coffee_Roaster.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Coffee_Roaster"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="searchBarGrey">#878787</Color>
+            <Color x:Key="seperatorGrey">#E6E6E6</Color>
+
+            <Style x:Key="ObjectHeader" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="50"></Setter>
+            </Style>
+
+            <Style x:Key="Label" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="25"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

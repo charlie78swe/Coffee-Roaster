@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="Coffee_Roaster.ResellerEdit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Coffee_Roaster"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    Name="ucReseller">
+    <Grid x:Name="mainPanel" xmlns:da="using:Coffee_Roaster.DataHolders">
+        <Grid.DataContext>
+            <da:Reseller/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"  ></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+       
+        <TextBlock 
+            Grid.Row="0" 
+            Grid.Column="0" 
+            HorizontalAlignment="Stretch" 
+            TextWrapping="Wrap" 
+            Name="lblName" 
+            Text="Name" 
+            Style="{StaticResource Label}" 
+            VerticalAlignment="Top" 
+            />
+
+        <TextBox 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            HorizontalAlignment="Stretch" 
+            Text="{Binding Path=Name, Mode=TwoWay}" 
+            Name="txtName" 
+            TextChanged="txtName_TextChanged"/>
+
+        <TextBlock  
+            Grid.Row="0" 
+            Grid.Column="2" 
+            Name="lblRating" 
+            Text="Rating" Style="{StaticResource Label}"/>
+
+        <local:Ratings 
+            Grid.Row="1" 
+            Grid.Column="2" 
+            Padding="10, 0, 0, 0"
+            Name="rRating" 
+            Rating="{Binding Path=Rating, ElementName=mainPanel, Mode=TwoWay}"/>
+
+        <TextBlock 
+            Grid.Row="3" 
+            Grid.Column="0" 
+            HorizontalAlignment="Left" 
+            TextWrapping="Wrap" 
+            Name="lblDesc" 
+            Text="Description" 
+            Style="{StaticResource Label}" 
+            VerticalAlignment="Top" />
+
+        <TextBox  
+            Grid.Row="4" 
+            Grid.Column="0" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch" 
+            Grid.ColumnSpan="3" 
+            Text="{Binding Path=Description, Mode=TwoWay}" 
+            Name="txtDesc" 
+            AcceptsReturn="True" 
+            TextWrapping="Wrap"/>
+    </Grid>
+</UserControl>
